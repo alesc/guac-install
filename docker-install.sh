@@ -94,10 +94,10 @@ rm -rf guacamole-auth-jdbc-${GUACVERSION}*
 
 # Patch for latest mysql version compatibility
 docker exec -it guacamole bash -c "
-wget https://dev.mysql.com/get/Downloads/Connector-J/mysql-connector-java-5.1.46.tar.gz
-tar xf mysql-connector-java-5.1.46.tar.gz
-rm mysql-connector-java-5.1.46.tar.gz
-mv mysql-connector-java-5.1.46/mysql-connector-java-5.1.46-bin.jar /opt/guacamole/mysql/
+wget https://dev.mysql.com/get/Downloads/Connector-J/mysql-connector-java-8.0.13.tar.gz
+tar xf mysql-connector-java-8.0.13.tar.gz
+rm mysql-connector-java-8.0.13.tar.gz
+mv mysql-connector-java-8.0.13/mysql-connector-java-8.0.13.jar /opt/guacamole/mysql/
 rm /opt/guacamole/mysql/mysql-connector-java-5.1.35-bin.jar
 "
 docker restart guacamole
